@@ -15,6 +15,8 @@
 		71158914206389AC0028D00A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71158913206389AC0028D00A /* main.m */; };
 		7115891E206389AC0028D00A /* LL_KeyValueObserveDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7115891D206389AC0028D00A /* LL_KeyValueObserveDemoTests.m */; };
 		71158929206389AC0028D00A /* LL_KeyValueObserveDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71158928206389AC0028D00A /* LL_KeyValueObserveDemoUITests.m */; };
+		7115893920638A420028D00A /* NSObject+LL_KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7115893820638A420028D00A /* NSObject+LL_KVO.m */; };
+		7115893C20638A8B0028D00A /* ObservedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7115893B20638A8B0028D00A /* ObservedObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		71158924206389AC0028D00A /* LL_KeyValueObserveDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LL_KeyValueObserveDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71158928206389AC0028D00A /* LL_KeyValueObserveDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LL_KeyValueObserveDemoUITests.m; sourceTree = "<group>"; };
 		7115892A206389AC0028D00A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7115893720638A420028D00A /* NSObject+LL_KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+LL_KVO.h"; sourceTree = "<group>"; };
+		7115893820638A420028D00A /* NSObject+LL_KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LL_KVO.m"; sourceTree = "<group>"; };
+		7115893A20638A8B0028D00A /* ObservedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObservedObject.h; sourceTree = "<group>"; };
+		7115893B20638A8B0028D00A /* ObservedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObservedObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		71158903206389AC0028D00A /* LL_KeyValueObserveDemo */ = {
 			isa = PBXGroup;
 			children = (
+				71158936206389F50028D00A /* NSObject+LL_KVO */,
 				71158904206389AC0028D00A /* AppDelegate.h */,
 				71158905206389AC0028D00A /* AppDelegate.m */,
 				71158907206389AC0028D00A /* ViewController.h */,
@@ -110,6 +117,8 @@
 				7115890F206389AC0028D00A /* LaunchScreen.storyboard */,
 				71158912206389AC0028D00A /* Info.plist */,
 				71158913206389AC0028D00A /* main.m */,
+				7115893A20638A8B0028D00A /* ObservedObject.h */,
+				7115893B20638A8B0028D00A /* ObservedObject.m */,
 			);
 			path = LL_KeyValueObserveDemo;
 			sourceTree = "<group>";
@@ -130,6 +139,15 @@
 				7115892A206389AC0028D00A /* Info.plist */,
 			);
 			path = LL_KeyValueObserveDemoUITests;
+			sourceTree = "<group>";
+		};
+		71158936206389F50028D00A /* NSObject+LL_KVO */ = {
+			isa = PBXGroup;
+			children = (
+				7115893720638A420028D00A /* NSObject+LL_KVO.h */,
+				7115893820638A420028D00A /* NSObject+LL_KVO.m */,
+			);
+			path = "NSObject+LL_KVO";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +285,9 @@
 			files = (
 				71158909206389AC0028D00A /* ViewController.m in Sources */,
 				71158914206389AC0028D00A /* main.m in Sources */,
+				7115893920638A420028D00A /* NSObject+LL_KVO.m in Sources */,
 				71158906206389AC0028D00A /* AppDelegate.m in Sources */,
+				7115893C20638A8B0028D00A /* ObservedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6G6VWF999S;
+				DEVELOPMENT_TEAM = DJ6J6WLK86;
 				INFOPLIST_FILE = LL_KeyValueObserveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ray.LL-KeyValueObserveDemo";
@@ -445,7 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6G6VWF999S;
+				DEVELOPMENT_TEAM = DJ6J6WLK86;
 				INFOPLIST_FILE = LL_KeyValueObserveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ray.LL-KeyValueObserveDemo";

@@ -7,23 +7,30 @@
 //
 
 #import "ViewController.h"
+#import "NSObject+LL_KVO.h"
+#import "ObservedObject.h"
 
 @interface ViewController ()
 
+@property (nonatomic, strong) ObservedObject *object;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    ObservedObject *object = [[ObservedObject alloc] init];
+    [object ll_addObserver:self forKey:@"observedNum" withBlock:^(id observedObject, NSString *observedKey, id oldValue, id newValue) {
+        NSLog(@"%@--%@--%@--%@", observedObject, observedKey, oldValue, newValue);
+    }];
+    
+    object.observedNum = @(5);
+    object.observedNum = @(8);
+    _object = object;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dealloc {
+    [_object ll_removeObserver:self forKey:@"observedNum"];
 }
-
-
 @end
